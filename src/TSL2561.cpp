@@ -211,7 +211,7 @@ uint32_t TSL2561::calculateLux(uint16_t ch0, uint16_t ch1) {
     temp = ((channel0 * b) - (channel1 * m));
 
     // do not allow negative lux value
-    if (temp < 0) temp = 0;
+    //if (temp < 0) temp = 0;
 
     // round lsb (2^(LUX_SCALE-1))
     temp += (1 << (TSL2561_LUX_LUXSCALE - 1));
